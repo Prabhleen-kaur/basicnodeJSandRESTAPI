@@ -1,0 +1,474 @@
+define({ "api": [
+  {
+    "type": "post",
+    "url": "/api/v1/product/create",
+    "title": "Create a product",
+    "version": "0.0.1",
+    "group": "create",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>the product name should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "description",
+            "description": "<p>the product description should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "bodyHtml",
+            "description": "<p>the product bodyHtml should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "category",
+            "description": "<p>the product category should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "brand",
+            "description": "<p>the product brand should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>the product price should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "rating",
+            "description": "<p>the product rating should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "warranty",
+            "description": "<p>the product warranty should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "cashOnDelivery",
+            "description": "<p>the cashOnDelivery should be passed as the body parameter</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Product Details Found\",\n\t    \"status\": 200,\n\t    \"data\": [\n        {\n\t\t   productId: \"string\",\n         Name: \"string\",\n         description:\"string\",\n         bodyHtml:\"string\",\n         category: \"string\",\n           brand: \"string\",\n             manufacturedOn: \"date\",\n             expiryDate :\"date\"\n         price: number,\n         rating: number,\n         warranty:\"string\",\n         cashOnDelivery:boolean\n        }\n                ]\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Failed To Find Product Details\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/product.js",
+    "groupTitle": "create",
+    "name": "PostApiV1ProductCreate"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/products/add",
+    "title": "Add a product",
+    "version": "0.0.1",
+    "group": "create",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>the product name should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "description",
+            "description": "<p>the product description should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "bodyHtml",
+            "description": "<p>the product bodyHtml should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "category",
+            "description": "<p>the product category should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "brand",
+            "description": "<p>the product brand should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>the product price should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "rating",
+            "description": "<p>the product rating should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "warranty",
+            "description": "<p>the product warranty should be passed as the body parameter</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "cashOnDelivery",
+            "description": "<p>the cashOnDelivery should be passed as the body parameter</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Product Details Found\",\n\t    \"status\": 200,\n\t    \"data\": [\n        {\n\t\t   productId: \"string\",\n         Name: \"string\",\n         description:\"string\",\n         bodyHtml:\"string\",\n         category: \"string\",\n           brand: \"string\",\n             manufacturedOn: \"date\",\n             expiryDate :\"date\"\n         price: number,\n         rating: number,\n         warranty:\"string\",\n         cashOnDelivery:boolean\n        }\n                ]\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Failed To Find Product Details\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/cart.js",
+    "groupTitle": "create",
+    "name": "PostApiV1ProductsAdd"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/product/:productID/delete",
+    "title": "Delete a particular product",
+    "version": "0.0.1",
+    "group": "delete",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "productID",
+            "description": "<p>the productID should be passed as the URL parameter</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Product Details Found\",\n\t    \"status\": 200,\n\t    \"data\": []\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Failed To Find Product Details\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/cart.js",
+    "groupTitle": "delete",
+    "name": "PostApiV1ProductProductidDelete"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/product/:productID/delete",
+    "title": "Delete a particular product",
+    "version": "0.0.1",
+    "group": "delete",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "productID",
+            "description": "<p>the productID should be passed as the URL parameter</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Product Details Found\",\n\t    \"status\": 200,\n\t    \"data\": []\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Failed To Find Product Details\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/product.js",
+    "groupTitle": "delete",
+    "name": "PostApiV1ProductProductidDelete"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/product/all",
+    "title": "Get all products",
+    "version": "0.0.1",
+    "group": "read",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Product Details Found\",\n\t    \"status\": 200,\n\t    \"data\": [\n\t\t\t\t\t{\n\t\t\t\t\t\tproductId: \"string\",\n            Name: \"string\",\n            description:\"string\",\n            bodyHtml:\"string\",\n            category: \"string\",\n              brand: \"string\",\n                manufacturedOn: \"date\",\n                expiryDate :\"date\"\n            price: number,\n            rating: number,\n            warranty:\"string\",\n            cashOnDelivery:boolean\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t}\n\t    \t\t]\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Failed To Find Product Details\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/cart.js",
+    "groupTitle": "read",
+    "name": "GetApiV1ProductAll"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/product/all",
+    "title": "Get all products",
+    "version": "0.0.1",
+    "group": "read",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Product Details Found\",\n\t    \"status\": 200,\n\t    \"data\": [\n\t\t\t\t\t{\n\t\t\t\t\t\tproductId: \"string\",\n            Name: \"string\",\n            description:\"string\",\n            bodyHtml:\"string\",\n            category: \"string\",\n              brand: \"string\",\n                manufacturedOn: \"date\",\n                expiryDate :\"date\"\n            price: number,\n            rating: number,\n            warranty:\"string\",\n            cashOnDelivery:boolean\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t}\n\t    \t\t]\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Failed To Find Product Details\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/product.js",
+    "groupTitle": "read",
+    "name": "GetApiV1ProductAll"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/product/:productId/deleteQuantity",
+    "title": "Update product",
+    "version": "0.0.1",
+    "group": "read",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n \"error\": false,\n \"message\": \"Product Details Found\",\n \"status\": 200,\n \"data\": [\n     {\n       productId: \"string\",\n       Name: \"string\",\n       description:\"string\",\n       bodyHtml:\"string\",\n       category: \"string\",\n         brand: \"string\",\n           manufacturedOn: \"date\",\n           expiryDate :\"date\"\n       price: number,\n       rating: number,\n       warranty:\"string\",\n       cashOnDelivery:boolean\n     \n   \n     \n     }\n     ]\n   }\n}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n \"error\": true,\n \"message\": \"Failed To Find Product Details\",\n \"status\": 500,\n \"data\": null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/cart.js",
+    "groupTitle": "read",
+    "name": "GetApiV1ProductProductidDeletequantity"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/product/:productId/edit",
+    "title": "Update product",
+    "version": "0.0.1",
+    "group": "read",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n   \"error\": false,\n   \"message\": \"Product Details Found\",\n   \"status\": 200,\n   \"data\": [\n       {\n         productId: \"string\",\n         Name: \"string\",\n         description:\"string\",\n         bodyHtml:\"string\",\n         category: \"string\",\n           brand: \"string\",\n             manufacturedOn: \"date\",\n             expiryDate :\"date\"\n         price: number,\n         rating: number,\n         warranty:\"string\",\n         cashOnDelivery:boolean\n       \n     \n       \n       }\n       ]\n     }\n }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n   \"error\": true,\n   \"message\": \"Failed To Find Product Details\",\n   \"status\": 500,\n   \"data\": null\n  }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/product.js",
+    "groupTitle": "read",
+    "name": "GetApiV1ProductProductidEdit"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/product/:productId/increaseQuantity",
+    "title": "Update product",
+    "version": "0.0.1",
+    "group": "read",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n \"error\": false,\n \"message\": \"Product Details Found\",\n \"status\": 200,\n \"data\": [\n     {\n       productId: \"string\",\n       Name: \"string\",\n       description:\"string\",\n       bodyHtml:\"string\",\n       category: \"string\",\n         brand: \"string\",\n           manufacturedOn: \"date\",\n           expiryDate :\"date\"\n       price: number,\n       rating: number,\n       warranty:\"string\",\n       cashOnDelivery:boolean\n     \n   \n     \n     }\n     ]\n   }\n}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n \"error\": true,\n \"message\": \"Failed To Find Product Details\",\n \"status\": 500,\n \"data\": null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/cart.js",
+    "groupTitle": "read",
+    "name": "GetApiV1ProductProductidIncreasequantity"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/product/view/by/category/:category",
+    "title": "Get a product",
+    "version": "0.0.1",
+    "group": "read",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Product Details Found\",\n\t    \"status\": 200,\n\t    \"data\": [\n\t\t\t\t\t{\n\t\t\t\t\t\tproductId: \"string\",\n            Name: \"string\",\n            description:\"string\",\n            bodyHtml:\"string\",\n            category: \"string\",\n              brand: \"string\",\n                manufacturedOn: \"date\",\n                expiryDate :\"date\"\n            price: number,\n            rating: number,\n            warranty:\"string\",\n            cashOnDelivery:boolean\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t}\n\t    \t\t]\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Failed To Find Product Details\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/product.js",
+    "groupTitle": "read",
+    "name": "GetApiV1ProductViewByCategoryCategory"
+  },
+  {
+    "type": "get",
+    "url": "/api/v1/product/view/:productId",
+    "title": "Get a products",
+    "version": "0.0.1",
+    "group": "read",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Product Details Found\",\n\t    \"status\": 200,\n\t    \"data\": [\n\t\t\t\t\t{\n\t\t\t\t\t\tproductId: \"string\",\n            Name: \"string\",\n            description:\"string\",\n            bodyHtml:\"string\",\n            category: \"string\",\n              brand: \"string\",\n                manufacturedOn: \"date\",\n                expiryDate :\"date\"\n            price: number,\n            rating: number,\n            warranty:\"string\",\n            cashOnDelivery:boolean\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t}\n\t    \t\t]\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Failed To Find Product Details\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routes/product.js",
+    "groupTitle": "read",
+    "name": "GetApiV1ProductViewProductid"
+  }
+] });
